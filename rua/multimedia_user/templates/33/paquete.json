@@ -1,0 +1,142 @@
+{
+        "id": "10000-02",
+        "nombre": "Template APREU",
+        "imagen_previa": "media/miniatura.png",
+        "scripts": [
+              
+            {
+                "nombre": "Jquery 2.1.1",
+                "archivo": "jquery-2.1.1.min.js",
+                "version": "1.9.1"
+            },
+            {
+                "nombre": "Materialize js",
+                "archivo": "materialize.js",
+                "version": "3.0"
+            },
+            {
+                "nombre": "contact-buttons js",
+                "archivo": "contact-buttons-plugin.js",
+                "version": "3.0"
+            },
+            {
+                "nombre": "Scripts js",
+                "archivo": "init.js",
+                "version": "3.0"
+            } 
+        ],     
+        "styles": [
+             {
+                "nombre": "Materialize css",
+                "archivo": "materialize.css",
+                "version": "3.0"
+            },
+             {
+                "nombre": "Estilos",
+                "archivo": "estilos.css",
+                "version": "3.0"
+            },
+            {
+                "nombre": "Inconsolata",
+                "archivo": "http://fonts.googleapis.com/css?family=Inconsolata",
+                "version": "3.0"
+            },                
+            {
+                "nombre": "Material Icons",
+                "archivo": "http://fonts.googleapis.com/icon?family=Material+Icons",
+                "version": "3.0"
+            },   
+            {
+                "nombre": "font-awesome",
+                "archivo": "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css",
+                "version": "3.0"
+            },   
+            {
+                "nombre": "Estilos",
+                "archivo": "contact-buttons-plugin.css",
+                "version": "3.0"
+            }
+        ],
+        "vistas": [   
+             {
+                "nombre": "vista_home",
+                "archivo": "home.html",
+                "version": "1.0",
+                "id":1,
+                "tipo_vista": "home",
+                "imagen":"miniatura.png"                
+            },
+            {
+                "nombre": "Galeria Img/Pub",
+                "archivo": "template2b.html",
+                "version": "1.0",
+                "id":2,
+                "tipo_vista": "multiple",
+                "imagen":"galeriamultiple.png"                  
+            },
+            {
+                "nombre": "template 3d",
+                "archivo": "template3d.html",
+                "version": "1.0",
+                "id":3,
+                "tipo_vista": "multiple",
+                "imagen":"template3d.png"                 
+            },
+            
+            {
+                "nombre": "Pub/Unica 1",
+                "archivo": "template3e.html",
+                "version": "1.0",
+                "id":4,
+                "tipo_vista": "unica",
+                "imagen":"unica1.png",
+                "default":"unica"
+            },
+            {
+                "nombre": "Pub/VistaSlider",
+                "archivo": "template4b.html",
+                "version": "1.0",
+                "id":5,
+                "tipo_vista": "multiple",
+                "imagen":"template4b.png"                 
+            },
+            {
+                "nombre": "Pub/UniCarrera",
+                "archivo": "template5e.html",
+                "version": "1.0",
+                "id":6,
+                "tipo_vista": "unica",
+                "imagen":"template5e.png"                 
+            },
+            {
+                "nombre": "Pub/Porcarrera",
+                "archivo": "template6a.html",
+                "version": "1.0",
+                "id":7,
+                "tipo_vista": "unica",
+                "imagen":"template6a.png"                 
+            },            
+            {
+                "nombre": "menu_v",
+                "archivo": "menuprincipal.html",
+                "version": "1.0"
+            },
+            {
+                "nombre": "body_pie_v",
+                "archivo": "piedepagina.html",
+                "version": "1.0"
+            }            
+         
+        ],
+        "media": [
+            {
+                "imagenes": [
+                    {
+                        "nombre": "logo",
+                        "archivo": ""
+                    }
+                ]
+            }
+        ]
+    }
+
