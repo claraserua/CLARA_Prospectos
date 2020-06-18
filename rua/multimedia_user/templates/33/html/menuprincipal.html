@@ -1,0 +1,133 @@
+<header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="white">
+                  <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons black-text">menu</i> <h4 class="black-text" style="display: inline">APREU</h4></a>            
+                    <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-demo">
+   {foreach $datos_menu_array as $dato_menu}
+                          {foreach $dato_menu as $dm_item}
+                            {assign var=dm_item_length value=$dm_item.hijos|@count}
+                             {if {$dm_item.hijos|@count} eq 0}
+                             <li>                   
+                                    {if  {$dm_item.tipo_menu} eq 4}
+                                    <a  class="black-text" href="javascript:void(0)    "> {$dm_item.texto} </a>
+                                    {/if}
+                                    {if  {$dm_item.tipo_menu} eq 1}
+                                    <a  class="black-text" href="{$base_url}front_publicaciones/publicaciones{$vista_previa}/{$dm_item.tipo_vista}/{$dm_item.ref_pagina}"> {$dm_item.texto} </a>
+                                    {/if}
+                                    {if  {$dm_item.tipo_menu} eq 2}
+                                    <a  class="black-text" href="{$dm_item.link}"> {$dm_item.texto} </a>
+                                    {/if}
+                                    {if  {$dm_item.tipo_menu} eq 3}
+                                    <a  class="black-text" href="{$dm_item.link}"> {$dm_item.texto} </a>
+                                    {/if}
+                                </li>
+                          {else}
+                           <li class="bold"><a class="collapsible-header  waves-effect  black-text">{$dm_item.texto}</a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        {foreach $dm_item.hijos as $dmchild}
+                                        {foreach $dmchild as $dmchild_item}
+                                        <li>
+                                          <a class="black-text" {if $dmchild_item.link neq ''} href="{$dmchild_item.link}" target="new" {else} href="{$base_url}front_publicaciones/publicaciones{$vista_previa}/{$dmchild_item.tipo_vista}/{$dmchild_item.ref_pagina}" {/if}> {$dmchild_item.texto} </a>
+                                        </li>                                          
+                                        {/foreach}
+                                      {/foreach}
+                                    </ul>
+                                </div>
+                                </li> 
+                          {/if}
+                          
+{/foreach}                
+{/foreach}           
+                    </ul> 
+                
+                
+                <div class="nav-wrapper">                                        
+                      <ul class="left hide-on-med-and-down">                      
+                              <li>
+                                <h1 class="logo-wrapper"><a href="{$base_url}" class="brand-logo">
+                                  <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menu_logo.png" alt="  logo">
+                                  </a> <span class="logo-text"></span>
+                                </h1>
+                              </li>
+                      </ul>
+                <div class="header-menu hide-on-med-and-down">
+                    <ul class=" hide-on-med-and-down black-text">                                  
+
+{for $i=0 to {$datos_menu_array|@count}-1 }
+       <li  {if $datos_menu_array[$i][$i]['ref_pagina'] eq $publication_active}class = "grey"{/if} >
+            {if  {$datos_menu_array[$i][$i]['tipo_menu']} eq 4}
+                <a  href="javascript:void(0)" class="black-text dropdown-menu" data-activates="{if {$datos_menu_array[$i][$i]['hijos']|@count} gt 0}menuhijo_{$i}{/if}" > {$datos_menu_array[$i][$i]['texto']} </a>
+            {/if}
+            {if  {$datos_menu_array[$i][$i]['tipo_menu']} eq 1}
+                <a  class="black-text" href="{$base_url}front_publicaciones/publicaciones{$vista_previa}/{$datos_menu_array[$i][$i]['tipo_vista']}/{$datos_menu_array[$i][$i]['ref_pagina']}"> {$datos_menu_array[$i][$i]['texto']} </a>
+            {/if}
+            {if  {$datos_menu_array[$i][$i]['tipo_menu']} eq 2}
+                <a  class="black-text" href="{$datos_menu_array[$i]['link']}">{$datos_menu_array[$i][$i]['texto']} </a>
+            {/if}
+            {if  {$datos_menu_array[$i][$i]['tipo_menu']} eq 3}
+                <a  class="black-text" href="{$datos_menu_array[$i]['link']}">{$datos_menu_array[$i][$i]['texto']} </a>
+            {/if}                 
+       </li>
+{/for}
+</ul>
+{for $i=0 to {$datos_menu_array|@count}-1 }
+     <ul id="menuhijo_{$i}" class="dropdown-content dropdown-horizontal-list">
+    {if {$datos_menu_array[$i][$i]['hijos']|@count} gt 0}
+            {for $j=0 to {$datos_menu_array[$i][$i]['hijos']|@count}-1 }
+                <li>
+                              {if  {$datos_menu_array[$i][$i]['hijos'][$j][$j]['tipo_menu']} eq 1}
+                              <a  class="black-text" style="font-size: 0.9rem;" href="{$base_url}front_publicaciones/publicaciones{$vista_previa}/{$datos_menu_array[$i][$i]['hijos'][$j][$j]['tipo_vista']}/{$datos_menu_array[$i][$i]['hijos'][$j][$j]['ref_pagina']}"> {$datos_menu_array[$i][$i]['hijos'][$j][$j]['texto']} </a>
+                              {/if}
+                              {if  {$datos_menu_array[$i][$i]['hijos'][$j][$j]['tipo_menu']} eq 2}
+                              <a  class="black-text" style="font-size: 0.9rem;" href="{$datos_menu_array[$i][$i]['hijos'][$j][$j]['link']}" target="_blank">{$datos_menu_array[$i][$i]['hijos'][$j][$j]['texto']}</a>
+                              {/if}
+                              {if  {$datos_menu_array[$i][$i]['hijos'][$j][$j]['tipo_menu']} eq 3}
+                              <a  class="black-text" style="font-size: 0.9rem;" href="{$datos_menu_array[$i][$i]['hijos'][$j][$j]['link']}">{$datos_menu_array[$i][$i]['hijos'][$j][$j]['texto']}</a>
+                              {/if}                                 
+                </li>
+            {/for}
+    {/if}
+     </ul>
+{/for}    
+         
+                    
+                    
+                    
+                      </div>
+                      <ul class="right hide-on-med-and-down">                                                        
+                                <h1 class="logo-wrapper right-align">
+                                <a href="#" class="menu-derecho "  onmouseover="menuaspirante(1)">
+                                  <img id='menu_derecha' src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menu_derecha.png" alt="  logo">
+                                </a>
+                                </h1>      
+                      </ul>  
+                </div>                
+            </nav>
+            
+  <div id='menuaspirante' style='display:none;right: 0px; right: 0px; top:0px;z-index:-1' >
+    <div class="card-panel" style="padding:0; margin-top:-6px"  >      
+    <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menuderecho_img.png" class="responsive-img"  >
+    
+      <div class="row" id="menu_paso0" >
+        <div class="col l12 s12 center" style="height: 40px; ">         
+            <b>Eres aspirante a:</b> 
+        </div>
+        <div class="col l6 s12 left"><a class="btn orange"  style="padding: 0 1rem; " href="{$base_url}front_publicaciones/publicaciones/unica/licenciaturas-empresariales">LICENCIATURA</a></div> 
+        <div class="col l6 s12 right" ><button class="btn orange right"   style="padding: 0 1rem;"  onclick="pre_menucontacto()">POSGRADO</button></div>
+      </div>
+     <div class="row" id="menu_paso1" style="display: none" >
+        <div class="col l12 s12 center" style="height: 40px; ">         
+            <a href="javascript:void(0)" onclick="pre_menucontacto()" class="left"><i class="mdi-content-reply  orange-text"></i></a><b>Prefieres estudiar un posgrado:</b>
+        </div>
+            <div class="col l6 s12 left"  ><a class="btn orange"  style="padding: 0 1rem; " href="{$base_url}front_publicaciones/publicaciones/unica/posgrados">PRESENCIAL</a></div> 
+            <div class="col l6 s12 right" ><a class="btn orange right" href="http://online.anahuac.mx"   style="padding: 0 1rem;" >EN LINEA</a></div>
+      </div>      
+    </div>
+  </div>            
+            
+</div>
+<!-- end header nav-->
+</header> 

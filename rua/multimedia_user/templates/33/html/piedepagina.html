@@ -1,0 +1,62 @@
+<script>
+var items_helpers=[];
+var baseurl='{$base_url}';
+{literal}
+                                        var str_helpers = '';
+                                        var tot_helpers=0;
+                                        var ban_helpers=0; 
+                                        $( document ).ready(function() {                                         
+                                            var str_helpers=$('#div_cuerpo_contenido').html();
+                                            var result = str_helpers.replace(/\{\{(.*?)\}\}/g, function(match, token) {                                            
+                                                var datos=token.split(' '); 
+                                                items_helpers[tot_helpers]=[];
+                                                items_helpers[tot_helpers][0]=datos[0];
+                                                items_helpers[tot_helpers][1]=datos[1];
+                                                items_helpers[tot_helpers][2]=datos[2];
+                                                tot_helpers++; 
+                                            });
+                                            if(tot_helpers>0){
+                                                 ban_helpers=1;                                                 
+                                                 setTimeout(eval(items_helpers[0][0]+'('+items_helpers[0][1]+')'), 3000);                                                 
+                                            }
+                                        });
+                                        function slider(id){
+                                             $.post(baseurl+'front_publicaciones/publicaciones/predatos',{id:id,tipo:'slider'},function(data){
+                                                var tmpdata=data; 
+                                                $.post(baseurl+'front_publicaciones/publicaciones/slider',{id:id},function(data){
+                                                        var str_helpers=$('#div_cuerpo_contenido').html();
+                                                        str_helpers = str_helpers.replace(tmpdata,data);
+                                                        $('#div_cuerpo_contenido').html(str_helpers);   
+                                                        if(ban_helpers < tot_helpers){
+                                                             setTimeout(eval(items_helpers[ban_helpers][0]+'('+items_helpers[ban_helpers][1]+')',ban_helpers++), 3500);
+                                                             
+                                                        }
+                                                        setTimeout("var $doc = $(document); var centerY = $doc.height() / 2;  $('#carousel"+id+"').css({'height':centerY/2});   $('#carousel"+id+"').carousel();  ",4500);                                                        
+                                                });});
+                                        }
+                                        function carousel(id){
+                                             $.post(baseurl+'front_publicaciones/publicaciones/predatos',{ id:id,tipo:'carousel' },function(data){
+                                                var tmpdata=data; 
+                                                $.post(baseurl+'front_publicaciones/publicaciones/carousel',{ id:id },function(data){
+                                                        var str_helpers=$('#div_cuerpo_contenido').html();
+                                                        str_helpers = str_helpers.replace(tmpdata,data);
+                                                        $('#div_cuerpo_contenido').html(str_helpers);   
+                                                        setTimeout('creaslider();', 3500); 
+                                                });});
+                                        } 										                                
+                                        function encuesta(id){
+                                             $.post(baseurl+'front_publicaciones/publicaciones/predatos',{id:id,tipo:'encuesta'},function(data){
+                                                var tmpdata=data; 
+                                                $.post(baseurl+'front_publicaciones/publicaciones/encuesta',{id:id},function(data){
+                                                        var str_helpers=$('#div_cuerpo_contenido').html();
+                                                        str_helpers = str_helpers.replace(tmpdata,data);
+                                                        $('#div_cuerpo_contenido').html(str_helpers);   
+                                                        if(ban_helpers < tot_helpers){
+                                                             setTimeout(eval(items_helpers[ban_helpers][0]+'('+items_helpers[ban_helpers][1]+')',ban_helpers++), 3000);                                                                                                     
+                                                        } 
+                                                      
+                                                });});                                            
+                                        }
+ 
+ {/literal}
+</script>

@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>RUA</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+ 
+    {$scrips_archivos}
+    <link href="{$base_url}multimedia_user/templates/{$template_id}/css/carousel.css" rel="stylesheet">
+    <link href='{$base_url}css/pricing-tables.css' rel='stylesheet' media='screen'>
+  </head>
+  <body>
+    
+{$menu_principal} 
+
+
+
+<div class="section"  style="overflow-x:auto; padding-top:0px">  
+<div class="slider fullscreen2">
+  <ul class="slides">
+    <li>
+      <img src="{$base_url}{$resultados[0]['imagen_full']}">  
+      <div class="caption center-align shape">
+        <h3>{$resultados[0]['publicacion']}</h3>
+      </div>
+    </li>
+    
+   
+  </ul>
+</div>
+<div class="row z-depth-1" style="margin-top: 2px"> 
+<div class="col s12 m12 l9" id="div_cuerpo_contenido">  {$tabladinamica}
+                    <!-- {$resultados[0]['cuerpo']}  --></div> 
+<div class="col s12 m12 l3 hide-on-med-and-down" style="auto;border: 0px none; padding: 0px;" id="div_twitter" >
+    <div class="row" style="auto;border: 0px none; padding: 0px;">
+                  <div class="col l12 orange" style="auto;border: 0px none; padding: 0px;"><h5><center>NOTICIAS DE RUA</center></h5></div>
+                                
+                 <div id="div_cuerpo_twitter"  class="col l12" style="overflow-x: auto; border: 0px none; padding: 0px;">
+                    
+                    <p><a class="twitter-timeline" data-tweet-limit="3" data-widget-id="567792211018801152" href="https://twitter.com/RedAnahuac">@RedAnahuac.</a>
+                    <script>!function(d,s,id){ var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                    if(!d.getElementById(id)){ js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js,fjs); } }
+                    (document,"script","twitter-wjs");</script></p>
+                    
+                  </div>
+                </div>
+           </div>  
+     </div>
+          
+         
+                </div>
+        
+ 
+
+
+<div id='menucontacto'>
+   <div class="row">
+      <div class="col l1" >
+      <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menucontacto.png" class="responsive-img" id="imgmenucontacto"    onclick="menucontacto()">
+      </div>
+     
+      <div class="col l11" id="menucontactox" style="display: none;">
+      <div class="row card-panel" id="menucontactop" style="padding: 5px;">      
+      <form class="col s12">
+      <div class="row">
+           <div class="col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Licenciatura</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+               </div>
+          </div>
+          <div class="input-field col s12">
+              <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Programa</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+              </div>
+          </div>
+        <div class="input-field col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Campus de Interés</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+       </div>
+ 
+      <div class="input-field col s12">
+      <i class="mdi-action-account-circle prefix"></i>
+      <input id="name3" type="text" placeholder="Nombre">
+      </div>
+      <div class="input-field col s12">
+       <i class="mdi-action-account-x prefix"></i>  
+      <input id="name3" type="text"   placeholder="Apellidos"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-communication-email prefix"></i>
+      <input id="name3" type="text" placeholder="Correo"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-maps-local-phone  prefix"></i>
+      <input id="name3" type="text" placeholder="Telefono"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-navigation-unfold-more   prefix"></i>
+      <input id="name3" type="text" placeholder="Ciudad y Estado">
+      </div>
+      <div class="input-field col s12"> 
+        <a class="waves-effect waves-light btn orange" style="font-size: 1rem;">!CONOCE MÁS¡ <i class="mdi-content-send "></i></a>
+      </div>
+      </div>
+    </form>
+    </div>
+   </div>
+   </div>
+</div>
+</div>
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Titulo</h4>
+      <p>A bunch of text</p><p>A bunch of text</p><p>A bunch of text</p><p>A bunch of text</p><p>A bunch of text</p><p>A bunch of text</p><p>A bunch of text</p><p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
+  
+  
+
+<footer id="footer" class="page-footer footer-fixed transparent" style="border: 0px none; padding: 0px;">
+    <div class="row black white-text center" style="bottom: -27px;position:fixed;width:100%"><div class="col l12 s12"> <p>Derechos reservados Universidad Anáhuac | Av. lomas Anáhuac #462 Col. Lomas Anáhuac C.P. 52786, Tel. (55) 5950 0160 Copyright 2010, Red de Universidades Anáhuc. Todos los derechos reservados.</p></div></div></div>          
+</footer>
+
+{$styles_archivos}
+<script type="text/javascript" src="{$base_url}multimedia_user/templates/{$template_id}/js/carousel.js">   </script>
+{$pie_pagina}
+<script>
+  function modalic(opc,id){
+      $('#modal1').openModal();
+  }
+</script>
+</body>
+</html>

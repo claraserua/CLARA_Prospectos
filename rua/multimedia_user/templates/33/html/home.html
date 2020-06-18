@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>RUA</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    {$scrips_archivos}
+
+    
+  </head>
+  <body>
+
+{$menu_principal}
+
+  
+<div id="slide_principal" class="slider fullscreen">
+  <ul class="slides">
+{if $slider eq 1}
+{assign var="i" value=0}
+    {foreach $banner as $r}
+      <li>
+      <img src="{$base_url}multimedia_user/{$dir_multimedia}/sliders/{$r.imagen_full}">  
+      <!--<div class="caption center-align shape">
+        <h3>{$r.titulo}</h3>
+      </div>-->
+    </li>
+      {$i=$i+1}
+    {/foreach}
+{/if}  
+  </ul>
+</div>
+ 
+ 
+
+
+<div id='menucontacto'>
+   <div class="row">
+      <div class="col l1" >
+      <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menucontacto.png" class="responsive-img" id="imgmenucontacto"    onclick="menucontacto()">
+      </div>
+     
+      <div class="col l11" id="menucontactox" style="display: none;">
+      <div class="row card-panel" id="menucontactop" style="padding: 5px;">      
+      <form class="col s12">
+      <div class="row">
+           <div class="col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Nivel de Estudios</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+               </div>
+          </div>
+          <div class="input-field col s12">
+              <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Programa</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+              </div>
+          </div>
+        <div class="input-field col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Campus de Interés</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+       </div>
+ 
+      <div class="input-field col s12">
+      <i class="mdi-action-account-circle prefix"></i>
+      <input id="name3" type="text" placeholder="Nombre">
+      </div>
+      <div class="input-field col s12">
+       <i class="mdi-action-account-x prefix"></i>  
+      <input id="name3" type="text"   placeholder="Apellidos"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-communication-email prefix"></i>
+      <input id="name3" type="text" placeholder="Correo"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-maps-local-phone  prefix"></i>
+      <input id="name3" type="text" placeholder="Telefono"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-navigation-unfold-more   prefix"></i>
+      <input id="name3" type="text" placeholder="Ciudad y Estado">
+      </div>
+      <div class="input-field col s12"> 
+        <a class="waves-effect waves-light btn orange" style="font-size: 1rem;">!CONOCE MÁS¡ <i class="mdi-content-send "></i></a>
+      </div>
+      </div>
+    </form>
+    </div>
+   </div>
+   </div>
+</div>
+</div>
+<footer class="page-footer footer-fixed transparent hide-on-med-and-down">
+         
+            <div class="row menuinferior_espacio"> 
+              <div class="col l1">&nbsp;</div>
+              <div class="col l2 s12 menuabajo" id="divmenuf-1">
+                 <div class="row">
+                     <img  src="{$base_url}multimedia_user/templates/{$template_id}/media/base/videos.png" id="imagenf-1" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuhome_video()">
+                     <div class="col l12 s12" style="height:100%; padding:0; margin: 0" >
+                          <div id="panelf-1"  style="background: url('{$base_url}multimedia_user/templates/{$template_id}/media/base/videos_bg.png') ;background-size: 100% 100%; background-repeat: no-repeat;height: 185px;   "> 
+                                {if isset($etiquetas[0])}
+                                {for $i=0 to {$etiquetas|@count}-1 }
+                                     {if ($etiquetas[$i]['nombre']=='videos')}
+                                                                   
+                                      {if isset($etiquetas[$i]['valores'][0])}
+                                         <a href="#" onclick="modalvideos()">
+                                          <img src="{$base_url}{$etiquetas[$i]['valores'][0]['imagen_full']}" id="imagenf-2" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0" >
+                                          </a>
+                                       {/if}
+                                     {/if}    
+                                {/for}
+                                {/if}                                 
+                           </div>                      
+                     </div>
+                 </div>
+              </div>              
+              <div class="col l2   s12   menuabajo" id="divmenuf-2">
+                 <div class="row">             
+                     <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/folletos.png" id="imagenf-2" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">                  
+                     <div class="col l12 s12" style="height:100%; padding:0; margin: 0" >
+                      <div id="panelf-2"   style="background-image: url('{$base_url}multimedia_user/templates/{$template_id}/media/base/folletos_bg.png');background-repeat: repeat; height: 185px;  " > 
+                                                          {if isset($etiquetas[0])}
+                                {for $i=0 to {$etiquetas|@count}-1 }
+                                     {if ($etiquetas[$i]['nombre']=='folleto')}
+                                                                   
+                                      {if isset($etiquetas[$i]['valores'][0])}
+                                         <a onclick="modalfolleto()">
+                                          <img src="{$base_url}{$etiquetas[$i]['valores'][0]['imagen_full']}" id="imagenf-2" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+                                          </a>
+                                       {/if}
+                                     {/if}    
+                                {/for}
+                                {/if}  
+                     </div>
+                     </div>
+                 </div>
+              </div>              
+              <div class="col l2  s12   menuabajo" id="divmenuf-3">
+                 <div class="row">                 
+                        <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/revista.png" id="imagenf-3" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+                  
+                     <div class="col l12 s12" style="height:100%; padding:0; margin: 0" >
+                        <div id="panelf-3" style="background-image: url('{$base_url}multimedia_user/templates/{$template_id}/media/base/revista_bg.png'); background-repeat: repeat;   height: 185px;   "> 
+                              {if isset($etiquetas[0])}
+                                {for $i=0 to {$etiquetas|@count}-1 }
+                                     {if ($etiquetas[$i]['nombre']=='revista')}
+                                                                   
+                                      {if isset($etiquetas[$i]['valores'][0])}
+                                         <a href="#" onclick="modalrevista()">
+                                          <img src="{$base_url}{$etiquetas[$i]['valores'][0]['imagen_full']}" id="imagenf-2" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+                                          </a>
+                                       {/if}
+                                     {/if}    
+                                {/for}
+                                {/if}  
+                        </div>                      
+                     </div>
+                 </div>
+              </div>              
+              <div class="col l2  s12   menuabajo" id="divmenuf-4">
+                 <div class="row">
+                           
+                        <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/sorteo.png" id="imagenf-4" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+                
+                     <div class="col l12 s12" style="height:100%; padding:0; margin: 0" >
+                        <div id="panelf-4" style="background: url('{$base_url}multimedia_user/templates/{$template_id}/media/base/sorteo_bg.png') ;background-repeat: repeat;   height: 185px;"> 
+       
+                                         <a href="http://www.sorteoanahuac.mx/">
+                                          <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/sorteoimg.png" id="imagenf-2" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+                                          </a>
+ 
+                     </div>                      
+                    </div>
+                 </div>
+              </div>              
+              <div class="col l2   s12   menuabajo" id="divmenuf-5">
+                 <div class="row">                   
+              <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/noticias.png" id="imagenf-5" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+              <div class="col l12 s12" style="height:100%; padding:0; margin: 0" >
+                    <div id="panelf-5"   style="background-image: url('{$base_url}multimedia_user/templates/{$template_id}/media/base/noticias_bg.png') ; background-repeat: repeat;   height: 185px;"> 
+                                                          {if isset($etiquetas[0])}
+                                {for $i=0 to {$etiquetas|@count}-1 }
+                                     {if ($etiquetas[$i]['nombre']=='noticias')}
+                                                                   
+                                      {if isset($etiquetas[$i]['valores'][0])}
+                                         <a href="{if ({$etiquetas[$i]['valores'][0]['link']|@count}) > 3}{$etiquetas[$i]['valores'][0]['link']}{else}{$base_url}front_publicaciones/publicaciones{$vista_previa}/unica/{$etiquetas[$i]['valores'][0]['url_amigable']}{/if}">
+                                          <img src="{$base_url}{$etiquetas[$i]['valores'][0]['imagen_full']}" id="imagenf-2" class="responsive-img z-depth-0 col l12" style="height:100%; padding:0; margin: 0"   onclick="menuinferior(2)">
+                                          </a>
+                                       {/if}
+                                     {/if}    
+                                {/for}
+                                {/if}  
+                     </div>
+               </div>
+                               
+                
+              </div>
+              <div class="col l1">&nbsp;</div>
+            </div>
+ 
+</footer>
+ <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal_videos" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      
+                                {if isset($etiquetas[0])}
+                                {for $i=0 to {$etiquetas|@count}-1 }
+                                     {if ($etiquetas[$i]['nombre']=='videos')}
+                                                                   
+                                      {if isset($etiquetas[$i]['valores'][0])}
+                                            <div class="video-container">{$etiquetas[$i]['valores'][0]['cuerpo']}   </div>                      
+                                       {/if}
+                                     {/if}    
+                                {/for}
+                                {/if}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat orange">Cerrar</a>
+    </div>
+  </div>
+
+
+  <div id="modal_videos" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      
+                                {if isset($etiquetas[0])}
+                                {for $i=0 to {$etiquetas|@count}-1 }
+                                     {if ($etiquetas[$i]['nombre']=='videos')}
+                                                                   
+                                      {if isset($etiquetas[$i]['valores'][0])}
+                                            <div class="video-container">{$etiquetas[$i]['valores'][0]['cuerpo']}   </div>                      
+                                       {/if}
+                                     {/if}    
+                                {/for}
+                                {/if}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat orange">Cerrar</a>
+    </div>
+  </div>
+
+
+<div id="modal_folleto" class="modal modal-fixed-footer">
+<div class="modal-content">
+  <div class="video-container">
+  <div data-configid="0/5084299" style="width:525px; height:352px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script> 
+  </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat orange">Cerrar</a>
+    </div>
+  </div>
+
+<div id="modal_revista" class="modal modal-fixed-footer">
+<div class="modal-content">
+  <div class="video-container">
+  <div data-configid="0/13137641" style="width:525px; height:317px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+  </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat orange">Cerrar</a>
+    </div>
+  </div>
+  
+    <!--  Scripts-->
+    {$styles_archivos}
+    <script>
+      function modalvideos(){
+                      $('#modal_videos').openModal();
+      }
+      function modalfolleto(){
+                      $('#folleto_videos').openModal();
+      }
+      function modalrevista(){
+                      $('#modal_revista').openModal();
+      }      
+    </script>
+</body>
+</html>

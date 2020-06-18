@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>Fullscreen Slider - Materialize</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    {$scrips_archivos}
+    <link href="{$base_url}multimedia_user/templates/{$template_id}/font/edosz/stylesheet.css" rel="stylesheet">  
+    
+  </head>
+  <body>
+
+{$menu_principal}
+
+ 
+
+
+<div style=" background-image: url('{$base_url}{$resultados[0]['imagen_full']}'); background-position: center center; background-repeat:no-repeat;background-size:cover; 
+position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;">
+
+<div class="row">
+<div class="col l6 center" style="margin-left: 20%; margin-right: 20%; margin-top: 15%">
+<div class="row">
+<div class="col1"></div>
+<div id="div_licenciaturastitulo" class="col l10 shape3 center"><div class="center-align white-text"><h5>BIENVENIDO A ATENCIÓN PREUNIVERSITARIA</h5></div>
+<div class="col1"></div>
+</div>
+<div class="col l12">
+<div class="row" id="div_liccontenedor">
+<div id="div_licenciaturas" class="input-field  col l9 center white" style="left: -60px; top:-15px">
+<select name="publicacion" id="publicacion" class="browser-default" style=" border: 0 none;">
+{$licenciaturas|@print_r}    
+</select>
+</div>
+<div id="div_licenciaturasbtn"  class="input-field  col l2 center orange white-text"
+     style="left: -60px; top:-15px" onclick="window.location='{$base_url}/front_publicaciones/publicaciones/unica/'+$('#publicacion').val(); "><h5>IR</h5></div>
+</div>
+</div>
+</div>
+</div>  
+</div>
+</div>
+
+
+
+<div id='menucontacto' style="right:-40 !important;position:relative">
+   <div class="row">
+      <div class="col l1" >
+      <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menucontacto.png" class="responsive-img" id="imgmenucontacto"    onclick="menucontacto()">
+      </div>
+     
+      <div class="col l11" id="menucontactox" style="display: none;">
+      <div class="row card-panel" id="menucontactop" style="padding: 5px;">      
+      <form class="col s12">
+      <div class="row">
+           <div class="col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Licenciatura</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+               </div>
+          </div>
+          <div class="input-field col s12">
+              <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Programa</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+              </div>
+          </div>
+        <div class="input-field col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Campus de Interés</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+       </div>
+ 
+      <div class="input-field col s12">
+      <i class="mdi-action-account-circle prefix"></i>
+      <input id="name3" type="text" placeholder="Nombre">
+      </div>
+      <div class="input-field col s12">
+       <i class="mdi-action-account-x prefix"></i>  
+      <input id="name3" type="text"   placeholder="Apellidos"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-communication-email prefix"></i>
+      <input id="name3" type="text" placeholder="Correo"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-maps-local-phone  prefix"></i>
+      <input id="name3" type="text" placeholder="Telefono"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-navigation-unfold-more   prefix"></i>
+      <input id="name3" type="text" placeholder="Ciudad y Estado">
+      </div>
+      <div class="input-field col s12"> 
+        <a class="waves-effect waves-light btn orange" style="font-size: 1rem;">!CONOCE MÁS¡ <i class="mdi-content-send "></i></a>
+      </div>
+      </div>
+    </form>
+    </div>
+   </div>
+   </div>
+</div>
+</div>
+
+<footer id="footer" class="page-footer footer-fixed transparent" style="border: 0px none; padding: 0px;">
+
+    <div class="row orange darken-1 white-text center" style="bottom: 50px;position:absolute;width:100%; height: 50px;  ">
+      <div class="col l12 s12">
+        <div class="container">
+            <div class="row">
+               
+                 <div class="col l3">
+                     <div class="button-container" id="menu_porqued">
+                     <a class='menu_porque white-text' href='#' data-activates='menu_porque_modal'>
+                     <img src='{$base_url}multimedia_user/templates/{$template_id}/media/base/icono_porque_anahuac.png' class="responsive-img" style="  z-index: 3; top:-28px;position:relative">
+                     <span class='menu_porque_span' style="font-family: 'edo_szregular'; font-size: 18px; z-index: 2; top:-68px; position:relative">POR QUE LA ANAHUAC</span>
+                     </a>
+                     </div>
+                        <div id="menu_porque_modal"  style="z-index: 2;  bottom: 120px; width: 180px; position: fixed">
+                                        <div class="modal-content" style="padding: 0px;">
+                                          <div class="collection" style="margin: 0rem 0;">
+                                            <a href="#!" class="collection-item black-text">El ABC del modelo</a>
+                                            <a href="#!" class="collection-item black-text">10 competencias institucionales</a>
+                                          </div>
+                                      </div>
+                        </div>                     
+                 </div>
+                 <div class="col l3  ">
+                     <div class="button-container" id="menu_inscripcionesd">
+                     <a class='menu_inscripciones white-text' href='#' data-activates='dropdown1'>
+                     <img src='{$base_url}multimedia_user/templates/{$template_id}/media/base/icono_admision.png' class="responsive-img" style="  z-index: 3; top:-28px;position:relative">
+                     <span class='menu_inscripciones_span' style="font-family: 'edo_szregular'; font-size: 18px; z-index: 2; top:-68px; position:relative">ADMISIÓN</span>
+                     </a>
+                     
+                     </div>
+                                      <div id="menu_inscripciones_modal"   style="z-index: 2;  bottom: 120px; width: 180px; position: fixed">
+                                        <div class="modal-content" style="padding: 0px;">
+                                          <div class="collection" style="margin: 0rem 0;">
+                                            <a href="#!" class="collection-item black-text">Proceso de Admisión</a>
+                                            <a href="#!" class="collection-item black-text">Fecha examen admisión</a>
+                                            <a href="#!" class="collection-item black-text">Día OV</a>
+                                            <a href="#!" class="collection-item black-text">Colegiaturas</a>
+                                            <a href="#!" class="collection-item black-text">Revalidación y equivalencias</a>
+                                            <a href="#!" class="collection-item black-text">Test OV</a>
+                                          </div>
+                                      </div>
+                                      </div>
+                 </div>
+                 <div class="col l3">
+                     <div class="button-container" id="menu_foraneosd">
+                     <a class='menu_foraneos white-text' href='#' data-activates='dropdown1'>
+                     <img src='{$base_url}multimedia_user/templates/{$template_id}/media/base/icono_foraneos.png' class="responsive-img" style="  z-index: 3; top:-38px;position:relative">
+                     <span  class='menu_foraneos_span' style="font-family: 'edo_szregular'; font-size: 18px; z-index: 2; top:-68px; position:relative">FORÁNEOS</span>
+                     </a></div>
+                        <div id="menu_foraneos_modal"  style="z-index: 2;  bottom: 120px; width: 180px; position: fixed">
+                                        <div class="modal-content" style="padding: 0px;">
+                                          <div class="collection" style="margin: 0rem 0;">
+                                            <a href="#!" class="collection-item black-text">Representantes foráneos</a> 
+                                          </div>
+                                      </div>
+                        </div>                       
+                 </div>
+                 <div class="col l3 left-align ">
+                     <div class="button-container" id="menu_becasd">
+                     <a class='menu_becas white-text' href='#' data-activates='dropdown1'>                  
+                     <img src='{$base_url}multimedia_user/templates/{$template_id}/media/base/icono_becas.png' class="responsive-img" style="  z-index: 3; top:-38px;position:relative">
+                     <span class='menu_becas_span' style="font-family: 'edo_szregular'; font-size: 18px; z-index: 2; top:-68px; position:relative">BECAS</span>
+                     </a></div>
+                        <div id="menu_becas_modal"  style="z-index: 2;  bottom: 120px; width: 180px; position: fixed">
+                                        <div class="modal-content" style="padding: 0px;">
+                                          <div class="collection" style="margin: 0rem 0;">
+                                            <a href="#!" class="collection-item black-text">Becas</a>
+                                            <a href="#!" class="collection-item black-text">Credito educativo</a>
+                                            <a href="#!" class="collection-item black-text">Concursos Académicos</a>
+                                            <a href="#!" class="collection-item black-text">Solicitud Becas</a>
+                                          </div>
+                                      </div>
+                        </div>                       
+                     
+                     
+                 </div> 
+      </div></div></div></div>              
+    <div class="row black white-text center" style="bottom: -25px;position:absolute;width:100%; height: 75px">
+      <div class="col l12 s12"><br /></div>
+      <div class="col l12 s12"> <p>Derechos reservados Universidad Anáhuac | Av. lomas Anáhuac #462 Col. Lomas Anáhuac C.P. 52786, Tel. (55) 5950 0160 Copyright 2010, Red de Universidades Anáhuc. Todos los derechos reservados.</p></div></div></div>          
+</footer>
+{$styles_archivos}
+<script>
+var image = document.getElementById('menu_derecha');
+image.src = "{$base_url}multimedia_user/templates/{$template_id}/media/base/testov.png";
+$(document).ready(function () {  
+  var doc = $('#div_licenciaturas');
+  var doc2 = $('#div_licenciaturastitulo');
+  var doc3 = $('#publicacion');
+
+
+  var centerY = doc.width();
+  var center2 = doc2.width();
+  var center3 = doc3.width();
+  
+
+  $('#div_liccontenedor').css({ 'width':(center3+40) });
+  $('#div_licenciaturasbtn').css({ 'width':(center2-centerY)+20,'height': doc3.height()+12});
+  
+  var menu_inscripciones = $('.menu_inscripciones_span');  
+  var menu_inscrionesd= menu_inscripciones.offset();  
+  $("#menu_inscripciones_modal").hide();     
+  $("#menu_inscripciones_modal").css({ "left": menu_inscrionesd.left  });  
+  $('.modal').leanModal({ dismissible: true });   
+  $( "#menu_inscripciones_modal" ).mouseenter(function() { var n = 1; }).mouseleave(function() {   $( "#menu_inscripciones_modal" ).hide();       });
+
+  var menu_porque = $('.menu_porque_span'); 
+  var menu_porqued = menu_porque.offset();  
+  $( "#menu_porque_modal" ).hide(); 
+  $('#menu_porque_modal').css({ "left": menu_porqued.left  });  
+  $( "#menu_porque_modal" ).mouseenter(function() { var n = 1; }).mouseleave(function() {   $( "#menu_porque_modal" ).hide();       });
+
+  var menu_porque = $('.menu_foraneos_span'); 
+  var menu_porqued = menu_porque.offset();  
+  $( "#menu_foraneos_modal" ).hide(); 
+  $('#menu_foraneos_modal').css({ "left": menu_porqued.left  });  
+  $( "#menu_foraneos_modal" ).mouseenter(function() { var n = 1; }).mouseleave(function() {   $( "#menu_foraneos_modal" ).hide();       });
+  
+  var menu_porque = $('.menu_becas_span'); 
+  var menu_porqued = menu_porque.offset();  
+  $( "#menu_becas_modal" ).hide(); 
+  $('#menu_becas_modal').css({ "left": menu_porqued.left  });  
+  $( "#menu_becas_modal" ).mouseenter(function() { var n = 1; }).mouseleave(function() {   $( "#menu_becas_modal" ).hide();       });
+  
+  
+ 
+
+$('body').on('click', '.menu_inscripciones', function(event) {
+		event.preventDefault();
+		var ele = $(this);
+		$(this).parent().addClass('open');
+		$(this).addClass('slide');
+		setTimeout(function() {
+			ele.parent().siblings().fadeIn();
+			setTimeout(function() {
+				ele.parent().removeClass('open');
+				ele.removeClass('slide');
+			}, 500)
+		}, 600);
+	});
+ 
+$('body').on('click', '.menu_foraneos', function(event) {
+		event.preventDefault();
+		var ele = $(this);
+		$(this).parent().addClass('open');
+		$(this).addClass('slide');
+		setTimeout(function() {
+			ele.parent().siblings().fadeIn();
+			setTimeout(function() {
+				ele.parent().removeClass('open');
+				ele.removeClass('slide');
+			}, 500)
+		}, 600);
+	});
+
+$('body').on('click', '.menu_porque', function(event) {
+		event.preventDefault();
+		var ele = $(this);
+		$(this).parent().addClass('open');
+		$(this).addClass('slide');
+		setTimeout(function() {
+			ele.parent().siblings().fadeIn();
+			setTimeout(function() {
+				ele.parent().removeClass('open');
+				ele.removeClass('slide');
+			}, 500)
+		}, 600);
+	});
+$('body').on('click', '.menu_becas', function(event) {
+		event.preventDefault();
+		var ele = $(this);
+		$(this).parent().addClass('open');
+		$(this).addClass('slide');
+		setTimeout(function() {
+			ele.parent().siblings().fadeIn();
+			setTimeout(function() {
+				ele.parent().removeClass('open');
+				ele.removeClass('slide');
+			}, 500)
+		}, 600);
+	});
+    
+	$('body').on('click', '.close', function(event) {
+		event.preventDefault();
+		$(this).parent().fadeOut();
+	});
+    
+ 
+    $('#menucontacto').css({ top: 190 });
+    //$('#imgmenucontacto').css({ top: 259 });
+
+
+})
+</script>
+</body>
+</html>

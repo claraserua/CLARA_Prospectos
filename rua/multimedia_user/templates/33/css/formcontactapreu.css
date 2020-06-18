@@ -1,0 +1,432 @@
+/*Update 2016-06-10  02:16 PM */
+
+/* The Modal (background) */
+.modalrua {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Modal Content */
+.modal-contentrua {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.modal-headerrua .close {
+    color: #000 !important;
+    float: right;
+    font-size: 28px !important;;
+    font-weight: bold;
+}
+
+.modal-headerrua .close:hover,
+.modal-headerrua .close:focus {
+    color: #ccc !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-headerrua {
+    padding: 10px !important;
+    background-color: #ff9800 !important;
+    color: white !important;
+	min-height: 25px !important;
+}
+
+
+.modal-headerrua h2{
+    margin:0 !important;
+	padding:0!important;
+	font-size: 30px !important;
+}
+
+.modal-bodyrua {padding: 20px !important; color:#000 !important; min-height: 20px !important;}
+
+.modal-bodyrua p{
+ margin-bottom:10px !important;
+ font-size: 12px !important;
+}
+
+.modal-footerrua {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+
+/*------------------formulario -----------------------*/
+
+
+  @media only screen  {
+   
+   html{
+   font-size:100% !important;
+    }
+    
+    }
+  
+  
+#menucontacto .rowk4 .colk4.s12 {
+    margin-left: 0;
+    width: 100%;
+}
+#menucontacto .rowk4 .colk4.s12.divaviso {
+    margin-left: 0;
+    width: 100%;
+	margin: 2px 0 8px 0;
+}
+
+#menucontacto{
+    font-family: 'Lato', 'Lato2', lato !important;
+    z-index: 9999 !important;
+    position: fixed;
+    bottom: 0;
+    right: -200px;
+    width: 220px;
+    font-size:100% !important;
+    
+}
+
+
+#menucontacto #imgmenucontacto{
+    z-index: 10;
+    position: fixed;
+    right:  0;
+    top: 258px;
+}
+#menucontacto #menucontactop{
+    width: 230px;
+    background-color:#fff;
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    /*background-color: rgba(177, 177, 177, .9);*/
+    position: fixed;
+    right:  0; z-index: 10;
+    box-sizing:content-box;
+    padding-bottom:10px !important;
+    padding-left:5px !important;
+    padding-right:5px !important;
+    padding-top:5px !important;
+}
+
+#menucontacto #menucontactop .rowk4{
+line-height:0px !important;
+}
+
+
+
+@import "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800";
+@import "//fonts.googleapis.com/css?family=Roboto:500,700,400";
+@import "//fonts.googleapis.com/css?family=Poiret+One:300,400,600,700,800";
+
+
+#menucontacto label { font-size: 0.7rem; }
+
+#menucontacto .input-field {margin-top: -1rem;}
+
+#menucontacto .rowk4 .colk4 {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 0rem;
+}
+
+#campusruaTol span{
+font-family:Arial, Helvetica, sans-serif !important;
+font-size: 12px !important;
+line-height: 15px !important;
+}
+
+#menucontacto .input-field {
+    margin: 0rem; 
+    /*font-size: small !important;*/
+}
+#menucontacto .select-wrapper, #menucontacto input { 
+background: rgba(255, 255, 255, 0.9); 
+position:relative; 
+height:15px;
+
+}
+
+#menucontacto  .input-field label.active {
+    font-size: 0.8rem;
+    transform: translateY(-90%);
+} 
+#menucontacto input.select-dropdown {
+    font-size: 1rem;
+    height: 2.0rem;
+    line-height: 2.2rem;
+    margin: 0 0 2px;
+}
+#menucontacto span.caret {
+    top: 10px;
+}
+#menucontacto input[type="text"]{
+    height: 1.6rem;
+    margin-bottom: 1px; 
+    margin-left: 2.2rem;
+    margin-right: 0.2rem;
+}
+
+#menucontactop .dropdown-content a {
+    font-size: 0.9rem;
+    padding: 0 8px;
+}
+
+
+#menucontactop .dropdowns {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  width: 100%;
+  margin-bottom:4px;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 #f5f5f5;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+
+#menucontactop .dropdowns:before, .dropdowns:after {
+  content: '';
+  position: absolute !important;
+  z-index: 2 !important;
+  top: 9px !important;
+  right: 10px !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 4px dashed !important;
+  border-color: #888 transparent !important;
+  pointer-events: none !important;
+}
+
+#menucontactop .dropdowns:before {
+  border-bottom-style: solid !important;
+  border-top: none !important;
+}
+#menucontactop .dropdowns:after {
+  margin-top: 7px !important;
+  border-top-style: solid !important;
+  border-bottom: none !important;
+}
+
+#menucontactop .dropdown-select {
+  font-family: Arial, Helvetica, sans-serif !important;
+  position: relative !important;
+  width: 130% !important;
+  margin: 0 !important;
+  padding: 6px 8px 6px 10px !important;
+  height: 28px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  line-height: 14px !important;
+  font-size: 12px !important;
+  color: #232323 !important;
+  text-shadow: 0 1px white !important;
+  /* Fallback for IE 8 */
+  background: #FFFFFF !important;
+  /* "transparent" doesn't work with Opera */
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  -webkit-appearance: none !important;
+}
+#menucontactop .dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline:   none;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+#menucontactop .dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#menucontactop .imgapreu{
+ position:absolute; 
+ float:right;
+ left:10px;
+ margin-top:4px;
+}
+
+
+#menucontactop .waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
+  
+  
+  #menucontactop .waves-effect .waves-ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    -ms-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    pointer-events: none; }
+    
+  #menucontactop .waves-effect.waves-light .waves-ripple {
+    background-color: rgba(255, 255, 255, 0.45); }
+  #menucontactop .waves-effect.waves-red .waves-ripple {
+    background-color: rgba(244, 67, 54, 0.7); }
+  #menucontactop .waves-effect.waves-yellow .waves-ripple {
+    background-color: rgba(255, 235, 59, 0.7); }
+  #menucontactop .waves-effect.waves-orange .waves-ripple {
+    background-color: rgba(255, 152, 0, 0.7); }
+  #menucontactop .waves-effect.waves-purple .waves-ripple {
+    background-color: rgba(156, 39, 176, 0.7); }
+  #menucontactop .waves-effect.waves-green .waves-ripple {
+    background-color: rgba(76, 175, 80, 0.7); }
+  #menucontactop .waves-effect.waves-teal .waves-ripple {
+    background-color: rgba(0, 150, 136, 0.7); }
+  #menucontactop .waves-effect input[type="button"] {
+    border: 0;
+    font-style: normal;
+    font-size: inherit;
+    text-transform: inherit;
+    background: none; }
+    
+ 
+	
+		
+	
+  #menucontactop .btn9796 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #FF9800;
+   border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  -ms-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer; }
+  
+  #menucontactop .btn9796:hover{
+    background-color: #2bbbad; }
+
+#menucontactop .z-depth-1-half, .btn9796:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+
+
+  #menucontactop .inputformapreu::-moz-placeholder { color:#999; }
+  #menucontactop .inputformapreu::-webkit-input-placeholder { color:#999; }
+  
+  
+  #menucontactop .inputformapreu{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+	border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 0.7rem !important;
+    margin: 0 0 15px 0;
+    padding: 0 !important;
+	font-size: 2rem;
+	margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+	line-height: initial;
+  }
+  
+  
+  #menucontacto .aviso{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333;
+  }
+  
+  
+ 
+
+
+

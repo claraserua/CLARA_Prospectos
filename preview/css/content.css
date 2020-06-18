@@ -1,0 +1,139 @@
+#sortableTiles{list-style-type:none;margin-top:10px}
+li.sortableTile-placeholder,li.sortableTile{float:left;margin:0 8px 8px 0}
+li.sortableTile,li.sortableTile-placeholder{height:195px;width:320px}
+li.sortableTile{border:1px solid #161616;position:relative;background:#000 no-repeat center center;z-index:1}
+li.sortableTile-placeholder{border:1px dashed gray;background-color:#222}
+div.sortableTile-container{position:absolute;left:0;top:0;width:100%;height:100%}
+div.sortableTile-footer{text-align:right}
+div.sortableTile-title{cursor:move;height:32px}
+.tileHover{background:rgba(0,0,0,0.66) url(/Images/drag-icon.gif) no-repeat 299px 11px}
+.sortableTile-title span{font-size:12px;font-weight:bold;font-family:Trebuchet MS;padding:10px 20px;color:White;position:absolute;background:rgba(0,0,0,0.7);line-height:12px;height:12px}
+.tileHover span{background:transparent}
+div.sortableTile-body{padding:12px 20px;display:none}
+div.sortableTile-link{margin-top:12px;font-weight:bold}
+div.sortableTile-dimmer{background-color:Black;top:0;left:0;height:195px;width:100%;display:none}
+div.sortableTile-enlargement{position:absolute;bottom:0;right:0;margin:0 10px 10px 10px;font-size:10px;line-height:10px;color:#777;text-align:right}
+div.sortableTile-title img{position:relative;right:0;top:0}
+li.sortableTile-dragging{border:1px solid white}
+/*#body-content-container{margin:10px 0 10px 10px;width:990px}*/
+
+#body-content-container{margin:0px auto 0px;width:990px}
+#flyout-asoLink{border-top:1px dotted black;padding-top:5px;margin-top:5px;text-align:right}
+#tiles-footer{width:992px;overflow:hidden}
+#tiles-footer .tile-container{float:left}
+#tiles-footer .left{width:660px}
+.tiles-footer-item{background:transparent url(/Images/hash-333333-pattern.png);border-right:solid #1a1a1a 10px;float:left;height:105px;padding:20px;margin-top:10px;width:280px}
+#tiles-footer .right .tiles-footer-item{height:260px}
+#tiles-footer .tiles-footer-title{color:White;font-size:12px;font-weight:bold}
+#tiles-footer a{font-weight:bold}
+#header-promotion{height:26px;padding:4px 7px;color:#CCC;width:316px;overflow:hidden;position:absolute;left:661px;top:103px;line-height:12px;margin-left:10px}
+#promo-SalePromotion-left,#promo-SalePromotion-center,#promo-SalePromotion-right{height:30px}
+#promo-SalePromotion-left,#promo-SalePromotion-center,#promo-SalePromotion-right,#promo-NewFeatures-left,#promo-NewFeatures-center,#promo-NewFeatures-right{float:left}
+#promo-NewFeatures-left,#promo-NewFeatures-center,#promo-NewFeatures-right{margin-top:3px;height:21px}
+#promo-SalePromotion-right,#promo-NewFeatures-right{margin-right:6px}
+#promo-SalePromotion-center,#promo-NewFeatures-center{color:White;text-transform:uppercase;padding:0 4px}
+#promo-SalePromotion-left{width:3px;background:url(/Images/header/sale-tag-sprite.png)}
+#promo-SalePromotion-center{line-height:25px;background:url(/Images/header/sale-tag-sprite.png) 0 -30px}
+#promo-SalePromotion-right{width:10px;background:url(/Images/header/sale-tag-sprite.png) -15px -60px}
+#promo-NewFeatures-left,#promo-NewFeatures-right{width:2px}
+#promo-NewFeatures-left{background:url(/Images/header/new-sprite.png)}
+#promo-NewFeatures-center{line-height:21px;background:url(/Images/header/new-sprite.png) 0 -21px}
+#promo-NewFeatures-right{background:url(/Images/header/new-sprite.png) 0 -42px}
+#promo-text{font-size:11px}
+#advanced-search-menu-block{position:relative;left:200px;top:50px}
+#search-header-menu-container{position:absolute;margin-top:-60px;margin-left:300px}
+html>body #search-header-menu-container{*margin-left:-320px}
+#search-header-menu{background:#1A1A1A;border-bottom:0;padding-top:15px;margin-bottom:5px;border-top:1px solid black}
+.search-header-menu-sep{height:44px}
+#searchbar,body #options_applied{font-weight:normal}
+#search_go-button,#searchbar{font-family:Trebuchet MS;font-size:18px;line-height:30px}
+#search_box-form{padding:0 5px}
+#searchbar{padding:0 5px;height:30px;overflow-x:hidden;text-overflow:clip;width:260px;float:left;margin:0 0 0 3px}
+#advanced_search2{position:relative;top:0;visibility:visible;display:inline}
+#flyout-info-container{height:30px!important;line-height:30px!important}
+#flyout-info-break{line-height:21px!important}
+#search_box-form{padding:0 0 0 10px}
+#newFeatures{display:none}
+#header-container{height:140px}
+#header-logo{bottom:64px}
+#header-cart{bottom:57px}
+#search_go-button{margin:0 10px 0 0;background:url(../images/header/go-button.png) repeat-x scroll 0 -60px;height:30px;line-height:30px;padding:0 14px}
+#search_go-button:hover{background:url(../images/header/go-button.png) repeat-x scroll 0 -150px}
+#header-container,body{background:#1a1a1a url(../images/header/header-index.png) repeat-x}
+#header-toplinks,#header-cart{right:13px}
+#header-container{width:990px; margin:0 auto 0;}
+body #searchflyout,body div#autoCompleteHolder{left:9px}#advanced-search-menu-block{left:220px}
+#Slideshow,.Slideshow div.slideContainer{height:400px;width:980px; padding:0px; background:#1a1a1a;cursor:pointer;font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+#Slideshow{display:block;overflow:hidden;border:1px solid #161616}
+#Slideshow.loading{background:url("../../../../../../../images/ajax-loader2.gif") no-repeat center center}
+.Slideshow div.slideContainer{background-color:transparent;background-repeat:no-repeat}
+div.slideDataContainer{width:278px;padding:20px 20px 0 20px;border:solid 1px #222;line-height:1.5em;position:relative;background-color:rgba(0,0,0,0.7)}
+.slideBackground{display:none}
+.slideData_left{float:left;-webkit-border-radius:0 5px 5px 0;-moz-border-radius:0 5px 5px 0;border-radius:0 5px 5px 0}
+.slideData_right{float:right;-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px}
+.Slideshow div.slideInfo{color:white;opacity:1!important}
+.Slideshow h2{line-height:1em;font-family:arial;font-size:22px}
+.Slideshow div.subheading{color:white;font-family:arial;font-size:15px;padding-top:5px}
+.Slideshow div.slideData{color:#999;font-size:12px;margin:15px 0;line-height:1.3em}
+.Slideshow div.slideData{font:trebuchet MS}
+.Slideshow div.rights{font-size:10px;color:#777;right:10px;clear:both;float:right}
+.Slideshow table{position:relative;text-align:center;width:800px}
+#SlideshowControls{width:972px;text-align:right;position:absolute;z-index:2;margin-top:-30px}
+.SlideshowNav{text-align:right;color:#69C;border:none!important;display:inline-block}
+.SlideshowNav a{height:15px;width:15px;border:2px solid black;background-color:#69C;color:#669ACC;margin-right:5px;display:inline-block;outline:0;-webkit-border-radius:4px;-webkit-transition-property:color,background;-webkit-transition-duration:.5s,.5s;-webkit-transition-timing-function:linear,ease-in;-moz-border-radius:4px;-moz-transition-property:color,background;-moz-transition-duration:.5s,.5s;-moz-transition-timing-function:linear,ease-in}
+.SlideshowNav a:hover,.SlideshowNav a.activeSlide{background-color:white;color:white}
+.addThis{float:left}
+.addThisIcon{background-image:url(../images/share-icon.png);height:16px;width:16px;float:left;position:relative;top:-1px;left:-1px}
+.shareThisSeparator{float:left;margin:0 2px 0 2px}
+.shareThisText{float:left;margin-left:2px}
+.Slideshow .ss-links{list-style-type:none;margin-top:12px}
+.Slideshow .ss-links li{margin:2px 0}
+
+
+
+.tiles-footer-item {
+    background: url("../images/hash-333333-pattern.png") repeat scroll 0 0 transparent;
+    border-right: 10px solid #1A1A1A;
+    float: left;
+    height: 105px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 280px;
+}
+
+#flyout-info-container {
+    background-color: white;
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    min-width: 100px;
+    padding: 0 15px;
+    position: relative;
+    text-align: right;
+}
+#flyout-info-break {
+    border-left: 1px solid #366A9A;
+    line-height: 15px;
+    margin-top: 5px;
+    padding: 0 8px 0 0;
+}
+#flyout-info {
+    color: #366A9A;
+    display: inline;
+    float: left;
+    font-size: 11px;
+    min-width: 70px;
+    position: relative;
+    text-align: right;
+}
+#flyout-info-container img.search-header-menu-arrow {
+    margin-left: 3px;
+    padding-left: 4px;
+    position: relative;
+    top: 10px;
+    vertical-align: middle;
+}
+#Search #flyout-info-container {
+    margin-top: 10px;
+}

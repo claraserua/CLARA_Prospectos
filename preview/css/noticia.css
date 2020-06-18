@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+.thumb {
+	width:67px;
+	height:80px;
+	background:url(../img/shadow_thumbnail.png) no-repeat bottom center;
+	margin:0px;
+	padding:0px;
+	float:left;
+	border:0px;
+}
+
+
+.resumen_articulo {
+    border-bottom: 1px dotted #999999;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom:15px;
+}
+
+
+.resumen {
+	float:left;
+	margin-left:40px;
+	width:530px;
+	text-align:justify;
+	font:Verdana, Geneva, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#666666;
+	padding-top:5px;
+}
+.resumen span {
+	font:Verdana, Geneva, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#006699;
+}
+.leer_btn {
+	background:url(../img/btn2.png) no-repeat left center;
+	height:30px;
+	font:Verdana, Geneva, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
+	float:left;
+	margin-left:40px;
+	margin-top:10px;
+	padding-left:35px;
+	padding-top:10px;
+}
+.leer_btn a {
+	text-decoration:none;
+	color:#999;
+	font-size:11px;
+}
+.leer_btn a span {
+	color:#036;
+	font-size:16px;
+}

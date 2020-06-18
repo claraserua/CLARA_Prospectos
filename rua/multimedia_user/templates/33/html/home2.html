@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>Fullscreen Slider - Materialize</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+ 
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/estilos.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">    
+    <link href="css/contact-buttons-plugin.css" rel="stylesheet">
+<style>
+.row .col {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 0rem;
+}
+
+</style>    
+  </head>
+  <body>
+    
+ <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="white">
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i> <h4 class="black-text" style="display: inline">APREU</h4></a>            
+                    <ul class="side-nav" id="mobile-demo">
+                          <li><a href="sass.html">Nosotros</a></li>
+                          <li><a href="badges.html">Oferta Académica</a></li>
+                          <li><a href="collapsible.html">Vida Universitaria</a></li>
+                          <li><a href="mobile.html">Internacional</a></li>
+                          <li><a href="mobile.html">Investigación y Vinculación</a></li>
+                          <li><a href="mobile.html">Universidades</a></li>
+                    </ul> 
+                
+                
+                <div class="nav-wrapper">                                        
+                      <ul class="left hide-on-med-and-down">                      
+                              <li>
+                                <h1 class="logo-wrapper"><a href="#" class="brand-logo">
+                                  <img src="imagenes/base/menu_logo.png" alt="forward logo">
+                                  </a> <span class="logo-text">APREU</span>
+                                </h1>
+                              </li>
+                      </ul>
+                      <div class="header-menu hide-on-med-and-down">
+                          <ul class=" hide-on-med-and-down black-text">
+                                  <li><a href="sass.html" class="black-text">Nosotros</a></li>
+                                  <li><a href="badges.html" class="black-text">Oferta Académica</a></li>
+                                  <li><a href="collapsible.html" class="black-text">Vida Universitaria</a></li>
+                                  <li><a href="mobile.html" class="black-text">Internacional</a></li>
+                                  <li><a href="mobile.html" class="black-text">Investigación y Vinculación</a></li>
+                                  <li><a href="mobile.html" class="black-text">Universidades</a></li>
+                          </ul>                         
+                      </div>
+                      <ul class="right hide-on-med-and-down">                                                        
+                                <h1 class="logo-wrapper right-align">
+                                <a href="#" class="menu-derecho" onclick="menuaspirante()">
+                                  <img id='menu_derecha' src="imagenes/base/menu_derecha.png" alt="forward logo">
+                                </a>
+                                </h1>      
+                      </ul>  
+                </div>                
+            </nav>
+            
+  <div id='menuaspirante' style='display:none;right: 0px; right: 0px; top:0px;' >
+    <img src="imagenes/base/menuderecho2_img.png" class="responsive-img"  >
+    <div class="card-panel" style="padding:0; margin-top:-6px">      
+      <div class="row">
+        <div class="col l12 s12 center">
+         
+            <b>Prefieres estudiar un posgrado:</b>
+        </div>
+        <div class="col l6 s12 left"><button class="btn orange"  style="padding:1; width: 95%" >PRESENCIAL</button></div> 
+        <div class="col l6 s12 right" ><button class="btn orange right"   style="padding:1;width: 95%" >EN LÍNEA</button></div>
+      </div>
+    </div>
+  </div>            
+            
+        </div>
+        <!-- end header nav-->
+    </header>   
+
+
+
+ 
+<div class="slider fullscreen">
+  <ul class="slides">
+    <li>
+      <img src="./imagenes/c.jpeg">  
+      <div class="caption center-align shape">
+        <h3>Grandes Lideres y Mejores Personas.</h3>
+      </div>
+    </li>
+    <li>
+      <img src="./imagenes/b.jpeg">  
+      <div class="caption center-align shape">
+        <h3>Grandes Lideres y Mejores Personas.</h3> 
+      </div>
+    </li>
+    <li>
+      <img src="./imagenes/a.jpeg">  
+      <div class="caption center-align shape">
+        <h3>Grandes Lideres y Mejores Personas.</h3> 
+      </div>
+    </li>
+  </ul>
+</div>
+ 
+ 
+
+<div id='menucontacto'>
+
+   <div class="row">
+      <div class="col l1" onclick="menucontacto()" >
+      <img src="./imagenes/base/menucontacto.png" class="responsive-img" id="imgmenucontacto"   >
+      </div>
+     
+      <div class="col l11" id="menucontactox" style="display: none" >
+      <div class="row card-panel" id="menucontactop">      
+      <form class="col s12">
+      <div class="row">
+           <div class="input-field col s12">
+               <select>
+                 <option value="" disabled selected>Licenciatura</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+          </div>
+          <div class="input-field col s12">
+               <select>
+                 <option value="" disabled selected>Programa</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+          </div>
+        <div class="input-field col s12">
+               <select>
+                 <option value="" disabled selected>Campus de Interés</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+       </div>
+ 
+      <div class="input-field col s12">
+      <i class="mdi-action-account-circle prefix"></i>
+      <input id="name3" type="text">
+      <label for="first_name">Nombre</label>
+      </div>
+      <div class="input-field col s12">
+      <input id="name3" type="text">
+      <label for="first_name">Apellidos</label>
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-communication-email prefix"></i>
+      <input id="name3" type="text">
+      <label for="first_name">Correo</label>
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-maps-local-phone  prefix"></i>
+      <input id="name3" type="text">
+      <label for="first_name">Telefono</label>
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-navigation-unfold-more   prefix"></i>
+      <input id="name3" type="text">
+      <label for="first_name">Ciudad y Estado</label>
+      </div>
+      <div class="input-field col s12 center">
+        <a class="waves-effect waves-light btn orange" style="font-size: 1rem;">!CONOCE MÁS¡ <i class="mdi-content-send "></i></a>
+      </div>
+      
+      </div>
+    </form>
+      </div>
+ 
+   </div>
+   </div>
+</div>
+
+
+<footer class="page-footer footer-fixed transparent">
+         
+            <div class="row menuinferior_espacio"> 
+              <div class="col l1">&nbsp;</div>
+              <div class="col l2 s12  menuabajo" id="divmenuf-1" >
+                 <img src="imagenes/base/videos.png" id="imagenf-1" class="responsive-img" alt="forward logo" onclick="menuinferior(1)">
+              </div>              
+              <div class="col l2   s12   menuabajo" id="divmenuf-2">
+                <img src="imagenes/base/folletos.png" id="imagenf-2" class="responsive-img" alt="forward logo" onclick="menuinferior(2)">
+              </div>              
+              <div class="col l2  s12   menuabajo" id="divmenuf-3">
+                <img src="imagenes/base/revista.png" id="imagenf-3" class="responsive-img" alt="forward logo" onclick="menuinferior(3)">
+              </div>              
+              <div class="col l2  s12   menuabajo" id="divmenuf-4">
+                <img src="imagenes/base/sorteo.png" id="imagenf-4" class="responsive-img" alt="forward logo" onclick="menuinferior(4)">
+              </div>              
+              <div class="col l2   s12   menuabajo" id="divmenuf-5">
+                <img src="imagenes/base/noticias.png" id="imagenf-5" class="responsive-img" alt="forward logo" onclick="menuinferior(5)">
+              </div>
+              <div class="col l1">&nbsp;</div>
+            </div>
+            <div class="row" style="bottom: -180px; position: absolute">
+               <div class="col l1">&nbsp;</div>
+               <div class="col l2 s12">
+                    <div id="panelf-1" class="card" style="background-image: url('imagenes/base/videos_bg.png');"> 
+                          <p>Contenido de videos</p>
+                     </div>
+               </div>
+               <div class="col l2 s12">
+                    <div id="panelf-2" class="card" style="background-image: url('imagenes/base/folletos_bg.png');" > 
+                          <p>Contenido de Folletos</p>
+                     </div>
+               </div>
+               <div class="col l2 s12">
+                    <div id="panelf-3" class="card"   style="background-image: url('imagenes/base/revista_bg.png');"> 
+                          <p>Contenido de revista</p>
+                     </div>
+               </div>
+               <div class="col l2 s12">
+                    <div id="panelf-4" class="card"   style="background-image: url('imagenes/base/sorteo_bg.png');"> 
+                          <p>Contenido de sorteo</p>
+                     </div>
+               </div>
+               <div class="col l2 s12">
+                    <div id="panelf-5" class="card"   style="background-image: url('imagenes/base/noticias_bg.png');"> 
+                          <p>Contenido de noticias</p>
+                     </div>
+               </div>
+               <div class="col l1">&nbsp;</div>
+            </div>
+</footer>
+    <!--  Scripts-->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/contact-buttons-plugin.js"></script>
+    <script src="js/init.js"></script> 
+</body>
+</html>

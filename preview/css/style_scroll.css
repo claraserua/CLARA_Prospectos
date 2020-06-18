@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#outer_container {
+
+	width:690px;
+	padding:0 10px;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+#customScrollBox {
+	position:relative;
+	height:600px;
+	overflow:hidden;
+}
+#customScrollBox .container {
+	position:relative;
+	width:670px;
+	top:0;
+	float:left;
+}
+#customScrollBox .content {
+	clear:both;
+}
+#customScrollBox .content p {
+	padding:10px 20px 10px 10px;
+	margin:10px 0;
+	color:#666;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+#customScrollBox img {
+	
+}
+#dragger_container {
+	position:relative;
+	width:0px;
+	height:580px;
+	float:left;
+	margin:5px 0 0 0px;
+	border-left:1px solid #bbb;
+	border-right:1px solid #fff;
+}
+#dragger {
+	position:absolute;
+	width:19px;
+	height:41px;
+	background:url(../img/custom_scrollbar_bg.png) no-repeat center center;
+}

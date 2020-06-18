@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>RUA</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+ 
+    {$scrips_archivos}   
+    <link href="{$base_url}multimedia_user/templates/{$template_id}/css/carousel.css" rel="stylesheet">
+    <link href="{$base_url}multimedia_user/templates/{$template_id}/css/timeline.css" rel="stylesheet">     
+  </head>
+  <body>
+    
+{$menu_principal}
+
+
+
+ 
+<div class="slider fullscreen">
+  <ul class="slides">
+{for $i=0 to {$resultados|@count}-1 }
+    <li>
+      <img src="{$base_url}{$resultados[$i]['imagen_full']}">  
+      <div class="caption center-align shape">
+        <h3><a href="{$base_url}front_publicaciones/publicaciones/unica/{$resultados[$i]['url_amigable']}" class="white-text">{$resultados[$i]['publicacion']}</a></h3>
+      </div>
+    </li>
+ {/for}   
+  </ul>
+</div> 
+
+
+
+
+<div id='menucontacto'>
+   <div class="row">
+      <div class="col l1" >
+      <img src="{$base_url}multimedia_user/templates/{$template_id}/media/base/menucontacto.png" class="responsive-img" id="imgmenucontacto"    onclick="menucontacto()">
+      </div>
+     
+      <div class="col l11" id="menucontactox" style="display: none;">
+      <div class="row card-panel" id="menucontactop" style="padding: 5px;">      
+      <form class="col s12">
+      <div class="row">
+           <div class="col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Licenciatura</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+               </div>
+          </div>
+          <div class="input-field col s12">
+              <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Programa</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+              </div>
+          </div>
+        <div class="input-field col s12">
+            <div class="dropdowns">
+               <select class="browser-default dropdown-select">
+                 <option value="" disabled selected>Campus de Interés</option>
+                 <option value="1">Option 1</option>
+                 <option value="2">Option 2</option>
+                 <option value="3">Option 3</option>
+               </select>
+       </div>
+ 
+      <div class="input-field col s12">
+      <i class="mdi-action-account-circle prefix"></i>
+      <input id="name3" type="text" placeholder="Nombre">
+      </div>
+      <div class="input-field col s12">
+       <i class="mdi-action-account-x prefix"></i>  
+      <input id="name3" type="text"   placeholder="Apellidos"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-communication-email prefix"></i>
+      <input id="name3" type="text" placeholder="Correo"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-maps-local-phone  prefix"></i>
+      <input id="name3" type="text" placeholder="Telefono"> 
+      </div>
+      
+      <div class="input-field col s12">
+      <i class="mdi-navigation-unfold-more   prefix"></i>
+      <input id="name3" type="text" placeholder="Ciudad y Estado">
+      </div>
+      <div class="input-field col s12"> 
+        <a class="waves-effect waves-light btn orange" style="font-size: 1rem;">!CONOCE MÁS¡ <i class="mdi-content-send "></i></a>
+      </div>
+      </div>
+    </form>
+    </div>
+   </div>
+   </div>
+</div>
+</div>
+ 
+
+{$styles_archivos}
+<script type="text/javascript" src="{$base_url}multimedia_user/templates/{$template_id}/js/carousel.js">   </script>
+<script type="text/javascript" src="{$base_url}multimedia_user/templates/{$template_id}/js/timeline2.js">   </script>
+{$pie_pagina}
+
+<script>
+$(document).ready(function () {
+        var $doc = $(document);
+        var centerY = $doc.height() / 2;
+        $('.fullscreen2').slider({ full_width: true, height:centerY+(centerY/3)-210,indicators:false});
+        $('#div_cuerpo_contenido').css({ 'height':(centerY/2)+(centerY/3)-70});
+        $('#div_cuerpo_twitter').css({ 'height':(centerY/2)+(centerY/3)});
+        var tam=(centerY/2)+(centerY/3)+100;
+        $('#footer').css({ 'height':tam});
+});     
+
+function muestracontenido(id){
+  $('.divs_contenidos').hide();
+  $('#div_contenido_'+id).show();
+  console.log(id);
+}
+</script>
+</body>
+</html>
