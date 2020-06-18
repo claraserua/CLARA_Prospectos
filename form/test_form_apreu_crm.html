@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Formulario de contacto Apreu</title>
+
+<style type="text/css">
+html, body {
+margin: 0;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 18px;
+color: #444;
+background-color: #fff;
+}
+pre{
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #EBECF1;
+border-radius: 3px;
+}
+
+#page-content{
+padding:30px;
+margin-right:100px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id='menucontacto' data-uni="UAMN"></div>
+
+<script type='text/javascript'>
+  var wf = document.createElement('script');
+  //wf.src = 'http://redanahuac.mx/rua/multimedia_user/templates/33/js/test_form_apreu_crm.js';
+  wf.src = 'test_form_apreu_crm.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+</script>
+
+<div id="page-content">
+
+<h2>TEST Formulario APREU - CRM</h2>
+<p>
+El formulario de contacto APREU, muestra a los visitantes los programas ofertados en la la Red de Universidades Anáhuac 
+en sus diferentes niveles Académicos, el visitante registra sus datos y estos son enviados directamente al responsable de la Universidad asignado
+para el seguimiento del prospecto.
+</p>
+
+<h2>Como insertar el formuario en su sitio web</h2>
+
+<p>
+Inserte dentro de la etiqueta <strong>&lt;body&gt;</strong> de su sitio el siguiente codigo:
+</p>
+<pre><code>
+  &lt;div id="menucontacto" data-uni="UAMN"&gt;&lt;/div&gt;
+
+  &lt;script type='text/javascript'&gt;
+  var wf = document.createElement('script');
+  wf.src = 'http://redanahuac.mx/rua/multimedia_user/templates/33/js/testformcontactapreu.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+  &lt;/script&gt;
+
+</code></pre>
+
+<p>Modifique el parametro data-uni="CODE" especificando su universidad:</p>
+<p>
+<ul>
+<li>Universidad Anáhuac México Norte<code> data-uni="UAMN"</code></li>
+<li>Universidad Anáhuac México Sur <code> data-uni="UAS"</code></li>
+<li>Universidad Anáhuac Puebla <code> data-uni="UAP"</code></li>
+<li>Universidad Anáhuac Oaxaca <code> data-uni="UAO"</code></li>
+<li>Universidad Anáhuac Queretaro <code> data-uni="UAQ"</code></li>
+<li>Universidad Anáhuac Mayab <code> data-uni="UAM"</code></li>
+<li>Universidad Anáhuac Xalapa <code> data-uni="UAX"</code></li>
+<li>Universidad Anáhuac Cancún <code> data-uni="UAC"</code></li>
+<li>Instituto Juan Pablo II <code> data-uni="IJPII"</code></li>
+<li>Instituto de Estudios Superiores de Tamaulipas <code> data-uni="IEST"</code></li>
+</ul>
+</p>
+
+<p>Cuando el visitante/prospecto envia sus datos aparecerá un mensaje de que sus datos han sido enviados:</p>
+
+<img src="http://redanahuac.mx/apreu/multimedia_user/imagenes/enviadoapreu.jpg" />
+
+<p>El responsable de cada universidad recibirá un correo con los datos resgistrados:</p>
+
+<img src="http://redanahuac.mx/apreu/multimedia_user/imagenes/correoapreu.jpg" />
+
+</div>
+</body>
+</html>
